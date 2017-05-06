@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="NO">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="224" id="KGk-i7-Jjw" customClass="FolderCell">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="210"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FolderCell">
+            <rect key="frame" x="0.0" y="0.0" width="579" height="96"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="200" height="209"/>
+                <rect key="frame" x="0.0" y="0.0" width="579" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Yosemite iPhone folder" translatesAutoresizingMaskIntoConstraints="NO" id="44x-Vk-4dx">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="194"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Yosemite iPhone folder" translatesAutoresizingMaskIntoConstraints="NO" id="44x-Vk-4dx">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="EdX-ci-fGB"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbA-5T-zaS">
-                        <rect key="frame" x="14" y="173" width="178" height="36"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Folder Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fls-KL-YeN">
+                        <rect key="frame" x="128" y="24" width="110" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNX-3M-ZvK">
-                        <rect key="frame" x="8" y="8" width="184" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSa-fa-Ikl">
+                        <rect key="frame" x="128" y="67" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="44x-Vk-4dx" secondAttribute="bottom" constant="7" id="Gkk-3j-8hh"/>
-                    <constraint firstAttribute="topMargin" secondItem="HNX-3M-ZvK" secondAttribute="top" id="HU9-7x-xy0"/>
-                    <constraint firstItem="44x-Vk-4dx" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="Hsq-XH-7og"/>
-                    <constraint firstItem="44x-Vk-4dx" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="LEs-eB-kDu"/>
-                    <constraint firstItem="xbA-5T-zaS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="Rlv-tO-yJY"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="xbA-5T-zaS" secondAttribute="bottom" constant="-8" id="oql-zb-yPh"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="HNX-3M-ZvK" secondAttribute="leading" id="wzJ-Qq-B2g"/>
+                    <constraint firstItem="Fls-KL-YeN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="1wP-am-Tfj"/>
+                    <constraint firstItem="44x-Vk-4dx" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="96d-Qc-Kni"/>
+                    <constraint firstItem="44x-Vk-4dx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="D8k-iD-ce0"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="44x-Vk-4dx" secondAttribute="bottom" constant="-8" id="Jgg-cf-PAh"/>
+                    <constraint firstAttribute="bottom" secondItem="qSa-fa-Ikl" secondAttribute="bottom" constant="2" id="bWc-6S-eT9"/>
+                    <constraint firstItem="qSa-fa-Ikl" firstAttribute="leading" secondItem="44x-Vk-4dx" secondAttribute="trailing" constant="8" id="kvk-oU-B5j"/>
+                    <constraint firstItem="Fls-KL-YeN" firstAttribute="leading" secondItem="44x-Vk-4dx" secondAttribute="trailing" constant="8" id="sbJ-7w-e4d"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="559" y="558"/>
+            <point key="canvasLocation" x="838.5" y="553"/>
         </tableViewCell>
     </objects>
     <resources>
