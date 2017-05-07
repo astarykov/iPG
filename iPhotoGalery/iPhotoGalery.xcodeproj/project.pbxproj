@@ -18,6 +18,7 @@
 		84DFBFE01EACFD40000F6A2D /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFDF1EACFD40000F6A2D /* TableViewController.m */; };
 		84DFBFE41EAD001C000F6A2D /* FolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFE21EAD001C000F6A2D /* FolderCell.m */; };
 		84DFBFE51EAD001C000F6A2D /* FolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DFBFE31EAD001C000F6A2D /* FolderCell.xib */; };
+		84E9DCE11EBDF3DA00361C10 /* PhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9DCE01EBDF3DA00361C10 /* PhotosTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		84DFBFE11EAD001C000F6A2D /* FolderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderCell.h; sourceTree = "<group>"; };
 		84DFBFE21EAD001C000F6A2D /* FolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderCell.m; sourceTree = "<group>"; };
 		84DFBFE31EAD001C000F6A2D /* FolderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FolderCell.xib; sourceTree = "<group>"; };
+		84E9DCDF1EBDF3DA00361C10 /* PhotosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosTableViewController.h; sourceTree = "<group>"; };
+		84E9DCE01EBDF3DA00361C10 /* PhotosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,10 +115,12 @@
 				84DFBFAC1EAB727E000F6A2D /* AppDelegate.m */,
 				84DFBFDE1EACFD40000F6A2D /* TableViewController.h */,
 				84DFBFDF1EACFD40000F6A2D /* TableViewController.m */,
+				84E9DCDF1EBDF3DA00361C10 /* PhotosTableViewController.h */,
+				84E9DCE01EBDF3DA00361C10 /* PhotosTableViewController.m */,
+				84DFBFB11EAB727E000F6A2D /* Main.storyboard */,
 				84DFBFE11EAD001C000F6A2D /* FolderCell.h */,
 				84DFBFE21EAD001C000F6A2D /* FolderCell.m */,
 				84DFBFE31EAD001C000F6A2D /* FolderCell.xib */,
-				84DFBFB11EAB727E000F6A2D /* Main.storyboard */,
 				84DFBFB71EAB727E000F6A2D /* Assets.xcassets */,
 				84DFBFB91EAB727E000F6A2D /* LaunchScreen.storyboard */,
 				84DFBFBC1EAB727E000F6A2D /* Info.plist */,
@@ -284,6 +289,7 @@
 			files = (
 				84DFBFB61EAB727E000F6A2D /* iPhotoGalery.xcdatamodeld in Sources */,
 				84DFBFAD1EAB727E000F6A2D /* AppDelegate.m in Sources */,
+				84E9DCE11EBDF3DA00361C10 /* PhotosTableViewController.m in Sources */,
 				84DFBFE01EACFD40000F6A2D /* TableViewController.m in Sources */,
 				84DFBFAA1EAB727E000F6A2D /* main.m in Sources */,
 				84DFBFE41EAD001C000F6A2D /* FolderCell.m in Sources */,

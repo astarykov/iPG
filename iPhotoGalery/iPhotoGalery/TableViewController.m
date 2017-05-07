@@ -7,9 +7,9 @@
 //
 
 #import "TableViewController.h"
+#import "PhotosTableViewController.h"
 
 @interface TableViewController()
-
 @end
 
 @implementation TableViewController
@@ -32,9 +32,19 @@
     return cell;
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    return 210;
-//}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"pushToFolder"])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        PhotosTableViewController *destViewController = segue.destinationViewController;
+        destViewController.folderName = @"Folder name";
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"pushToFolder" sender:self];
+}
 
 @end
