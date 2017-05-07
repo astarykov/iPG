@@ -10,5 +10,5 @@
 
 @interface PreViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
-@property (nonatomic, strong) UIImage *currentImage;
+@property (nonatomic, retain) UIImage *currentImage;
 @end

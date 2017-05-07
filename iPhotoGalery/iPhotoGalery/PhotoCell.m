@@ -9,9 +9,4 @@
 #import "PhotoCell.h"
 
 @implementation PhotoCell
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
 @end

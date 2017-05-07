@@ -17,6 +17,6 @@
 
 
 @interface PhotoShot : NSObject
-@property (nonatomic,retain) UIImage *picture;
-@property (nonatomic,retain) NSDate *creationDate;
+@property (nonatomic, retain) UIImage *picture;
+@property (nonatomic, retain) NSDate *creationDate;
 @end

@@ -13,7 +13,7 @@
 
 @interface FoldersTableViewController() <UIAlertViewDelegate>
 
-@property (nonatomic,strong) NSMutableArray *foldersList;
+@property (nonatomic, retain) NSMutableArray *foldersList;
 
 @end
 

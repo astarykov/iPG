@@ -9,9 +9,4 @@
 #import "FolderCell.h"
 
 @implementation FolderCell
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
 @end

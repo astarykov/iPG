@@ -13,8 +13,6 @@
 
 @interface PhotosTableViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-//@property (nonatomic, retain) NSMutableArray *photos;
-
 @end
 
 @implementation PhotosTableViewController
@@ -29,7 +27,6 @@
     {
         _destinationFolder.photos = [[NSMutableArray alloc] init];
     }
-    //_photos = _destinationFolder.photos ? _destinationFolder.photos : [[NSMutableArray alloc] init];
 }
 
 #pragma mark - Table view data source
