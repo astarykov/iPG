@@ -48,6 +48,11 @@
                     <constraint firstItem="Fls-KL-YeN" firstAttribute="leading" secondItem="44x-Vk-4dx" secondAttribute="trailing" constant="8" id="sbJ-7w-e4d"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="folderDateCreated" destination="qSa-fa-Ikl" id="jcC-Vr-H1O"/>
+                <outlet property="folderIcon" destination="44x-Vk-4dx" id="CB3-zD-1rn"/>
+                <outlet property="folderName" destination="Fls-KL-YeN" id="dVM-LH-flU"/>
+            </connections>
             <point key="canvasLocation" x="838.5" y="553"/>
         </tableViewCell>
     </objects>

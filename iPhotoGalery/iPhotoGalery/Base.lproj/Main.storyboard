@@ -12,7 +12,7 @@
         <!--Folders-->
         <scene sceneID="Z0b-3P-c1c">
             <objects>
-                <tableViewController id="6qt-O6-0Yg" customClass="TableViewController" sceneMemberID="viewController">
+                <tableViewController id="6qt-O6-0Yg" customClass="FoldersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uhC-i1-7C0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,14 @@
                             <outlet property="delegate" destination="6qt-O6-0Yg" id="cDO-Pu-JKY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Folders" id="6U2-Qa-w7b"/>
+                    <navigationItem key="navigationItem" title="Folders" id="6U2-Qa-w7b">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="sPk-p0-5q7">
+                            <color key="tintColor" red="0.43581644489999999" green="0.50497902800000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addNewFolder:" destination="6qt-O6-0Yg" id="EXn-tQ-T9G"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qt0-z5-2zV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,6 +64,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="bpf-3g-iGO" kind="show" identifier="previewImage" id="1i0-6F-8bK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,11 +74,50 @@
                             <outlet property="delegate" destination="iZP-xA-Ljd" id="N7G-af-DRQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Photos" id="t6B-fO-lCy"/>
+                    <navigationItem key="navigationItem" title="Photos" id="t6B-fO-lCy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="SED-gu-vOR">
+                            <color key="tintColor" red="0.43581644489999999" green="0.50497902800000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="takePhoto:" destination="iZP-xA-Ljd" id="hpY-5P-q4e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gy-50-OLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2304" y="444"/>
+        </scene>
+        <!--Pre View Controller-->
+        <scene sceneID="MMn-qH-RWP">
+            <objects>
+                <viewController id="bpf-3g-iGO" customClass="PreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hkb-hO-mnn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lda-X3-Ehq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oD6-M3-bCK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Getty-Images-logo" translatesAutoresizingMaskIntoConstraints="NO" id="cfy-be-daX">
+                                <rect key="frame" x="16" y="127" width="320" height="1704"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cfy-be-daX" firstAttribute="height" secondItem="oD6-M3-bCK" secondAttribute="height" id="32Q-Nq-86f"/>
+                            <constraint firstItem="cfy-be-daX" firstAttribute="centerY" secondItem="oD6-M3-bCK" secondAttribute="centerY" id="9F1-fu-biM"/>
+                            <constraint firstItem="cfy-be-daX" firstAttribute="width" secondItem="oD6-M3-bCK" secondAttribute="width" id="mEy-yl-BHI"/>
+                            <constraint firstItem="cfy-be-daX" firstAttribute="centerX" secondItem="oD6-M3-bCK" secondAttribute="centerX" id="w5j-Hp-2RW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewImageView" destination="cfy-be-daX" id="QC0-Rn-CeA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GI0-y5-5ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3099" y="444"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ybH-rF-c0J">
@@ -89,4 +138,7 @@
             <point key="canvasLocation" x="476.25" y="443.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Getty-Images-logo" width="2272" height="1704"/>
+    </resources>
 </document>

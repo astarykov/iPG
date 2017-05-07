@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8458B1841EBF56FA0045D6DF /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B1821EBF56FA0045D6DF /* PhotoCell.m */; };
+		8458B1851EBF56FA0045D6DF /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8458B1831EBF56FA0045D6DF /* PhotoCell.xib */; };
+		8458B1881EBFAA6A0045D6DF /* PreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B1871EBFAA6A0045D6DF /* PreViewController.m */; };
 		84DFBFAA1EAB727E000F6A2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFA91EAB727E000F6A2D /* main.m */; };
 		84DFBFAD1EAB727E000F6A2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFAC1EAB727E000F6A2D /* AppDelegate.m */; };
 		84DFBFB31EAB727E000F6A2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DFBFB11EAB727E000F6A2D /* Main.storyboard */; };
@@ -15,7 +18,7 @@
 		84DFBFBB1EAB727E000F6A2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DFBFB91EAB727E000F6A2D /* LaunchScreen.storyboard */; };
 		84DFBFC61EAB727E000F6A2D /* iPhotoGaleryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFC51EAB727E000F6A2D /* iPhotoGaleryTests.m */; };
 		84DFBFD11EAB727E000F6A2D /* iPhotoGaleryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFD01EAB727E000F6A2D /* iPhotoGaleryUITests.m */; };
-		84DFBFE01EACFD40000F6A2D /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFDF1EACFD40000F6A2D /* TableViewController.m */; };
+		84DFBFE01EACFD40000F6A2D /* FoldersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFDF1EACFD40000F6A2D /* FoldersTableViewController.m */; };
 		84DFBFE41EAD001C000F6A2D /* FolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFE21EAD001C000F6A2D /* FolderCell.m */; };
 		84DFBFE51EAD001C000F6A2D /* FolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DFBFE31EAD001C000F6A2D /* FolderCell.xib */; };
 		84E9DCE11EBDF3DA00361C10 /* PhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9DCE01EBDF3DA00361C10 /* PhotosTableViewController.m */; };
@@ -39,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8458B1811EBF56FA0045D6DF /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		8458B1821EBF56FA0045D6DF /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		8458B1831EBF56FA0045D6DF /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		8458B1861EBFAA6A0045D6DF /* PreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreViewController.h; sourceTree = "<group>"; };
+		8458B1871EBFAA6A0045D6DF /* PreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreViewController.m; sourceTree = "<group>"; };
 		84DFBFA51EAB727D000F6A2D /* iPhotoGalery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhotoGalery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DFBFA91EAB727E000F6A2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84DFBFAB1EAB727E000F6A2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,8 +62,8 @@
 		84DFBFCC1EAB727E000F6A2D /* iPhotoGaleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhotoGaleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DFBFD01EAB727E000F6A2D /* iPhotoGaleryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPhotoGaleryUITests.m; sourceTree = "<group>"; };
 		84DFBFD21EAB727E000F6A2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84DFBFDE1EACFD40000F6A2D /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		84DFBFDF1EACFD40000F6A2D /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		84DFBFDE1EACFD40000F6A2D /* FoldersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoldersTableViewController.h; sourceTree = "<group>"; };
+		84DFBFDF1EACFD40000F6A2D /* FoldersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldersTableViewController.m; sourceTree = "<group>"; };
 		84DFBFE11EAD001C000F6A2D /* FolderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderCell.h; sourceTree = "<group>"; };
 		84DFBFE21EAD001C000F6A2D /* FolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderCell.m; sourceTree = "<group>"; };
 		84DFBFE31EAD001C000F6A2D /* FolderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FolderCell.xib; sourceTree = "<group>"; };
@@ -113,14 +121,19 @@
 			children = (
 				84DFBFAB1EAB727E000F6A2D /* AppDelegate.h */,
 				84DFBFAC1EAB727E000F6A2D /* AppDelegate.m */,
-				84DFBFDE1EACFD40000F6A2D /* TableViewController.h */,
-				84DFBFDF1EACFD40000F6A2D /* TableViewController.m */,
+				84DFBFDE1EACFD40000F6A2D /* FoldersTableViewController.h */,
+				84DFBFDF1EACFD40000F6A2D /* FoldersTableViewController.m */,
 				84E9DCDF1EBDF3DA00361C10 /* PhotosTableViewController.h */,
 				84E9DCE01EBDF3DA00361C10 /* PhotosTableViewController.m */,
 				84DFBFB11EAB727E000F6A2D /* Main.storyboard */,
 				84DFBFE11EAD001C000F6A2D /* FolderCell.h */,
 				84DFBFE21EAD001C000F6A2D /* FolderCell.m */,
 				84DFBFE31EAD001C000F6A2D /* FolderCell.xib */,
+				8458B1811EBF56FA0045D6DF /* PhotoCell.h */,
+				8458B1821EBF56FA0045D6DF /* PhotoCell.m */,
+				8458B1831EBF56FA0045D6DF /* PhotoCell.xib */,
+				8458B1861EBFAA6A0045D6DF /* PreViewController.h */,
+				8458B1871EBFAA6A0045D6DF /* PreViewController.m */,
 				84DFBFB71EAB727E000F6A2D /* Assets.xcassets */,
 				84DFBFB91EAB727E000F6A2D /* LaunchScreen.storyboard */,
 				84DFBFBC1EAB727E000F6A2D /* Info.plist */,
@@ -223,13 +236,16 @@
 				TargetAttributes = {
 					84DFBFA41EAB727D000F6A2D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ASGYAXMZNR;
 					};
 					84DFBFC01EAB727E000F6A2D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ASGYAXMZNR;
 						TestTargetID = 84DFBFA41EAB727D000F6A2D;
 					};
 					84DFBFCB1EAB727E000F6A2D = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ASGYAXMZNR;
 						TestTargetID = 84DFBFA41EAB727D000F6A2D;
 					};
 				};
@@ -263,6 +279,7 @@
 				84DFBFB81EAB727E000F6A2D /* Assets.xcassets in Resources */,
 				84DFBFB31EAB727E000F6A2D /* Main.storyboard in Resources */,
 				84DFBFE51EAD001C000F6A2D /* FolderCell.xib in Resources */,
+				8458B1851EBF56FA0045D6DF /* PhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +307,9 @@
 				84DFBFB61EAB727E000F6A2D /* iPhotoGalery.xcdatamodeld in Sources */,
 				84DFBFAD1EAB727E000F6A2D /* AppDelegate.m in Sources */,
 				84E9DCE11EBDF3DA00361C10 /* PhotosTableViewController.m in Sources */,
-				84DFBFE01EACFD40000F6A2D /* TableViewController.m in Sources */,
+				8458B1841EBF56FA0045D6DF /* PhotoCell.m in Sources */,
+				8458B1881EBFAA6A0045D6DF /* PreViewController.m in Sources */,
+				84DFBFE01EACFD40000F6A2D /* FoldersTableViewController.m in Sources */,
 				84DFBFAA1EAB727E000F6A2D /* main.m in Sources */,
 				84DFBFE41EAD001C000F6A2D /* FolderCell.m in Sources */,
 			);
@@ -367,9 +386,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ASGYAXMZNR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -414,9 +435,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ASGYAXMZNR;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -429,6 +452,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

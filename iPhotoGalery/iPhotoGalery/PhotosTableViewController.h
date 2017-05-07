@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FoldersTableViewController.h"
 
 @interface PhotosTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSString *folderName;
+@property (nonatomic, retain) CustomFolder *destinationFolder;
 
+@end
+
+
+@interface PhotoShot : NSObject
+@property (nonatomic,retain) UIImage *picture;
+@property (nonatomic,retain) NSDate *creationDate;
 @end

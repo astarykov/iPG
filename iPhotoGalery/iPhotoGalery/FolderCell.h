@@ -10,4 +10,8 @@
 
 @interface FolderCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *folderIcon;
+@property (weak, nonatomic) IBOutlet UILabel *folderName;
+@property (weak, nonatomic) IBOutlet UILabel *folderDateCreated;
+
 @end
