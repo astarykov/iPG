@@ -9,10 +9,11 @@
 #import "PhotosTableViewController.h"
 #import "PhotoCell.h"
 #import "PreViewController.h"
+#import "Utils.h"
 
 @interface PhotosTableViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (nonatomic, retain) NSMutableArray *photos;
+//@property (nonatomic, retain) NSMutableArray *photos;
 
 @end
 
@@ -24,27 +25,29 @@
     UINib *nib = [UINib nibWithNibName:@"PhotoCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"photoCell"];
     
-    _photos = _destinationFolder.photos ? _destinationFolder.photos : [[NSMutableArray alloc] init];
+    if (!_destinationFolder.photos)
+    {
+        _destinationFolder.photos = [[NSMutableArray alloc] init];
+    }
+    //_photos = _destinationFolder.photos ? _destinationFolder.photos : [[NSMutableArray alloc] init];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _photos.count;
+    return _destinationFolder.photos.count;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    PhotoShot* shot = [_destinationFolder.photos objectAtIndex:indexPath.row];
     
-    PhotoShot* shot = [[PhotoShot alloc] init];
-    shot.picture = [_photos objectAtIndex:indexPath.row];
     PhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"photoCell" forIndexPath:indexPath];
     cell.picture.image = shot.picture;
+
+    cell.creationDate.text = [Utils getCurrentDateWithString:shot.creationDate];
     
-    shot.creationDate = [NSDate date];
-    NSDateFormatter *dt = [[NSDateFormatter alloc]init];
-    [dt setDateFormat:@"yyyy-MM-dd HH:mm"];
-    cell.creationDate.text = [NSString stringWithFormat:@"%@", [dt stringFromDate:shot.creationDate]];
     return cell;
 }
 
@@ -55,7 +58,7 @@
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-        [_photos removeObjectAtIndex:indexPath.row];
+        [_destinationFolder.photos removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }];
     deleteAction.backgroundColor = [UIColor redColor];
@@ -78,9 +81,9 @@
     if ([segue.identifier isEqualToString:@"previewImage"])
     {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        UIImage *pickedImage = [_photos objectAtIndex:indexPath.row];
+        PhotoShot *pickedImage = [_destinationFolder.photos objectAtIndex:indexPath.row];
         PreViewController *destViewController = segue.destinationViewController;
-        destViewController.currentImage = pickedImage;
+        destViewController.currentImage = pickedImage.picture;
     }
 }
 
@@ -93,11 +96,13 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
-    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
-    [_photos addObject:image];
+    PhotoShot *shot = [[PhotoShot alloc] init];
+    shot.picture = [info valueForKey:UIImagePickerControllerOriginalImage];
+    shot.creationDate = [NSDate date];
+    [_destinationFolder.photos addObject:shot];
     [self.tableView reloadData];
     
-    _destinationFolder.photos = _photos;
+    _destinationFolder.photos = _destinationFolder.photos;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

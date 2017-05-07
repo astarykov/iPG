@@ -9,6 +9,7 @@
 #import "FoldersTableViewController.h"
 #import "PhotosTableViewController.h"
 #import "FolderCell.h"
+#import "Utils.h"
 
 @interface FoldersTableViewController() <UIAlertViewDelegate>
 
@@ -38,10 +39,8 @@
     FolderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"folderCell"];
     CustomFolder *currentFolder = [_foldersList objectAtIndex:indexPath.row];
     cell.folderName.text = currentFolder.name;
-    
-    NSDateFormatter *dt = [[NSDateFormatter alloc]init];
-    [dt setDateFormat:@"yyyy-MM-dd HH:mm"];
-    cell.folderDateCreated.text = [NSString stringWithFormat:@"%@", [dt stringFromDate:currentFolder.date]];
+
+    cell.folderDateCreated.text = [Utils getCurrentDateWithString:currentFolder.date];
     
     return cell;
 }

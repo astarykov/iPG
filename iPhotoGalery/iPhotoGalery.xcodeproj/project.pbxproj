@@ -10,6 +10,7 @@
 		8458B1841EBF56FA0045D6DF /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B1821EBF56FA0045D6DF /* PhotoCell.m */; };
 		8458B1851EBF56FA0045D6DF /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8458B1831EBF56FA0045D6DF /* PhotoCell.xib */; };
 		8458B1881EBFAA6A0045D6DF /* PreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B1871EBFAA6A0045D6DF /* PreViewController.m */; };
+		8458B18B1EBFB2330045D6DF /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8458B18A1EBFB2330045D6DF /* Utils.m */; };
 		84DFBFAA1EAB727E000F6A2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFA91EAB727E000F6A2D /* main.m */; };
 		84DFBFAD1EAB727E000F6A2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFAC1EAB727E000F6A2D /* AppDelegate.m */; };
 		84DFBFB31EAB727E000F6A2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DFBFB11EAB727E000F6A2D /* Main.storyboard */; };
@@ -47,6 +48,8 @@
 		8458B1831EBF56FA0045D6DF /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		8458B1861EBFAA6A0045D6DF /* PreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreViewController.h; sourceTree = "<group>"; };
 		8458B1871EBFAA6A0045D6DF /* PreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreViewController.m; sourceTree = "<group>"; };
+		8458B1891EBFB2330045D6DF /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		8458B18A1EBFB2330045D6DF /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		84DFBFA51EAB727D000F6A2D /* iPhotoGalery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhotoGalery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DFBFA91EAB727E000F6A2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84DFBFAB1EAB727E000F6A2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				8458B1831EBF56FA0045D6DF /* PhotoCell.xib */,
 				8458B1861EBFAA6A0045D6DF /* PreViewController.h */,
 				8458B1871EBFAA6A0045D6DF /* PreViewController.m */,
+				8458B1891EBFB2330045D6DF /* Utils.h */,
+				8458B18A1EBFB2330045D6DF /* Utils.m */,
 				84DFBFB71EAB727E000F6A2D /* Assets.xcassets */,
 				84DFBFB91EAB727E000F6A2D /* LaunchScreen.storyboard */,
 				84DFBFBC1EAB727E000F6A2D /* Info.plist */,
@@ -304,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8458B18B1EBFB2330045D6DF /* Utils.m in Sources */,
 				84DFBFB61EAB727E000F6A2D /* iPhotoGalery.xcdatamodeld in Sources */,
 				84DFBFAD1EAB727E000F6A2D /* AppDelegate.m in Sources */,
 				84E9DCE11EBDF3DA00361C10 /* PhotosTableViewController.m in Sources */,
