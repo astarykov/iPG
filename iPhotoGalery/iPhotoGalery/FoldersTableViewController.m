@@ -13,7 +13,7 @@
 
 @interface FoldersTableViewController() <UIAlertViewDelegate>
 
-@property (nonatomic, retain) NSMutableArray *foldersList;
+@property (nonatomic, strong) NSMutableArray *folders;
 
 @end
 
@@ -26,21 +26,21 @@
     UINib *nib = [UINib nibWithNibName:@"FolderCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"folderCell"];
     
-    _foldersList = [[NSMutableArray alloc] init];
+    _folders = [[NSMutableArray alloc] init];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _foldersList.count;
+    return _folders.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     FolderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"folderCell"];
-    CustomFolder *currentFolder = [_foldersList objectAtIndex:indexPath.row];
-    cell.folderName.text = currentFolder.name;
+    CustomFolder *currentFolder = [_folders objectAtIndex:indexPath.row];
+    cell.folderNameLabel.text = currentFolder.name;
 
-    cell.folderDateCreated.text = [Utils getCurrentDateWithString:currentFolder.date];
+    cell.folderDateCreatedLabel.text = [Utils getCurrentDateWithString:currentFolder.date];
     
     return cell;
 }
@@ -50,7 +50,7 @@
     if ([segue.identifier isEqualToString:@"pushToFolder"])
     {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        CustomFolder *currentFolder = [_foldersList objectAtIndex:indexPath.row];
+        CustomFolder *currentFolder = [_folders objectAtIndex:indexPath.row];
         PhotosTableViewController *destViewController = segue.destinationViewController;
         destViewController.destinationFolder = currentFolder;
     }
@@ -68,7 +68,7 @@
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"Delete"  handler:^(UITableViewRowAction *action, NSIndexPath *indexPath){
-        [_foldersList removeObjectAtIndex:indexPath.row];
+        [_folders removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }];
     deleteAction.backgroundColor = [UIColor redColor];
@@ -107,7 +107,7 @@
     newFolder.name = name;
     newFolder.date = [NSDate date];
     
-    [_foldersList addObject:newFolder];
+    [_folders addObject:newFolder];
     [self.tableView reloadData];
 }
 
@@ -115,4 +115,5 @@
 
 
 @implementation CustomFolder
+
 @end

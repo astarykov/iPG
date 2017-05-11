@@ -9,4 +9,5 @@
 #import "FolderCell.h"
 
 @implementation FolderCell
+
 @end

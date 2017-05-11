@@ -11,12 +11,12 @@
 
 @interface PhotosTableViewController : UITableViewController
 
-@property (nonatomic, retain) CustomFolder *destinationFolder;
+@property (nonatomic, strong) CustomFolder *destinationFolder;
 
 @end
 
 
 @interface PhotoShot : NSObject
-@property (nonatomic, retain) UIImage *picture;
-@property (nonatomic, retain) NSDate *creationDate;
+@property (nonatomic, strong) UIImage *picture;
+@property (nonatomic, strong) NSDate *creationDate;
 @end

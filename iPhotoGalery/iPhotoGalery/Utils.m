@@ -9,11 +9,12 @@
 #import "Utils.h"
 
 @implementation Utils
+
 +(NSString *)getCurrentDateWithString:(NSDate *)date
 {
-    NSDateFormatter *dt = [[NSDateFormatter alloc]init];
-    [dt setDateFormat:@"yyyy-MM-dd HH:mm"];
-    NSString *currentDate = [NSString stringWithFormat:@"%@", [dt stringFromDate:date]];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *currentDate = [NSString stringWithFormat:@"%@", [dateFormat stringFromDate:date]];
     return currentDate;
 }
 

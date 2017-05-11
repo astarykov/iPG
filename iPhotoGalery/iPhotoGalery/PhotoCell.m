@@ -9,4 +9,5 @@
 #import "PhotoCell.h"
 
 @implementation PhotoCell
+
 @end

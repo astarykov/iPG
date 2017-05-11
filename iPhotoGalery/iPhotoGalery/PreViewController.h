@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface PreViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIImageView *previewImageView;
-@property (nonatomic, retain) UIImage *currentImage;
+@property (nonatomic, strong) UIImage *currentImage;
+
 @end

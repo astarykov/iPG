@@ -14,8 +14,8 @@
 
 @interface CustomFolder : NSObject
 
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSDate *date;
-@property (nonatomic, retain) NSMutableArray *photos;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSMutableArray *photos;
 
 @end

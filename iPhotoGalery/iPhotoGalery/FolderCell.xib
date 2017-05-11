@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="579" height="96"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="579" height="95"/>
+                <rect key="frame" x="0.0" y="0.0" width="579" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Yosemite iPhone folder" translatesAutoresizingMaskIntoConstraints="NO" id="44x-Vk-4dx">
@@ -50,8 +50,12 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="folderDateCreated" destination="qSa-fa-Ikl" id="jcC-Vr-H1O"/>
+                <outlet property="folderDateCreatedLAbel" destination="qSa-fa-Ikl" id="4zn-nB-4ST"/>
+                <outlet property="folderDateCreatedLabel" destination="qSa-fa-Ikl" id="7Ju-fJ-L6Q"/>
                 <outlet property="folderIcon" destination="44x-Vk-4dx" id="CB3-zD-1rn"/>
+                <outlet property="folderIconImageView" destination="44x-Vk-4dx" id="h0z-v8-mwS"/>
                 <outlet property="folderName" destination="Fls-KL-YeN" id="dVM-LH-flU"/>
+                <outlet property="folderNameLabel" destination="Fls-KL-YeN" id="VaV-Jf-wff"/>
             </connections>
             <point key="canvasLocation" x="838.5" y="553"/>
         </tableViewCell>
