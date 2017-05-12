@@ -21,7 +21,6 @@
 		84DFBFD11EAB727E000F6A2D /* iPhotoGaleryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFD01EAB727E000F6A2D /* iPhotoGaleryUITests.m */; };
 		84DFBFE01EACFD40000F6A2D /* FoldersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFDF1EACFD40000F6A2D /* FoldersTableViewController.m */; };
 		84DFBFE41EAD001C000F6A2D /* FolderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DFBFE21EAD001C000F6A2D /* FolderCell.m */; };
-		84DFBFE51EAD001C000F6A2D /* FolderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84DFBFE31EAD001C000F6A2D /* FolderCell.xib */; };
 		84E9DCE11EBDF3DA00361C10 /* PhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E9DCE01EBDF3DA00361C10 /* PhotosTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +68,6 @@
 		84DFBFDF1EACFD40000F6A2D /* FoldersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoldersTableViewController.m; sourceTree = "<group>"; };
 		84DFBFE11EAD001C000F6A2D /* FolderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderCell.h; sourceTree = "<group>"; };
 		84DFBFE21EAD001C000F6A2D /* FolderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderCell.m; sourceTree = "<group>"; };
-		84DFBFE31EAD001C000F6A2D /* FolderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FolderCell.xib; sourceTree = "<group>"; };
 		84E9DCDF1EBDF3DA00361C10 /* PhotosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosTableViewController.h; sourceTree = "<group>"; };
 		84E9DCE01EBDF3DA00361C10 /* PhotosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,7 +129,6 @@
 				84DFBFB11EAB727E000F6A2D /* Main.storyboard */,
 				84DFBFE11EAD001C000F6A2D /* FolderCell.h */,
 				84DFBFE21EAD001C000F6A2D /* FolderCell.m */,
-				84DFBFE31EAD001C000F6A2D /* FolderCell.xib */,
 				8458B1811EBF56FA0045D6DF /* PhotoCell.h */,
 				8458B1821EBF56FA0045D6DF /* PhotoCell.m */,
 				8458B1831EBF56FA0045D6DF /* PhotoCell.xib */,
@@ -283,7 +280,6 @@
 				84DFBFBB1EAB727E000F6A2D /* LaunchScreen.storyboard in Resources */,
 				84DFBFB81EAB727E000F6A2D /* Assets.xcassets in Resources */,
 				84DFBFB31EAB727E000F6A2D /* Main.storyboard in Resources */,
-				84DFBFE51EAD001C000F6A2D /* FolderCell.xib in Resources */,
 				8458B1851EBF56FA0045D6DF /* PhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,9 +23,6 @@
 {
     [super viewDidLoad];
     
-    UINib *nib = [UINib nibWithNibName:@"FolderCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"folderCell"];
-    
     _folders = [[NSMutableArray alloc] init];
 }
 
@@ -45,20 +42,10 @@
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"pushToFolder"])
-    {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        CustomFolder *currentFolder = [_folders objectAtIndex:indexPath.row];
-        PhotosTableViewController *destViewController = segue.destinationViewController;
-        destViewController.destinationFolder = currentFolder;
-    }
-}
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"pushToFolder" sender:self];
+    PhotosTableViewController *photosTableView = [self.storyboard instantiateViewControllerWithIdentifier:@"PhotosView"];
+    [self.navigationController pushViewController:photosTableView animated:YES];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
