@@ -44,7 +44,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+    CustomFolder *currentFolder = [_folders objectAtIndex:selectedIndexPath.row];
     PhotosTableViewController *photosTableView = [self.storyboard instantiateViewControllerWithIdentifier:@"PhotosView"];
+    photosTableView.destinationFolder = currentFolder;
     [self.navigationController pushViewController:photosTableView animated:YES];
 }
 
